@@ -1,3 +1,53 @@
-<iframe seamless scrolling="no" src="slide-real/index.php" style="width: 100%; height: 500px; margin: 0 auto;"></iframe>
-<br>
-<iframe seamless scrolling="no" src="slide-real/index.php" style="width: 100%; height: 500px; margin: 0 auto;"></iframe>
+
+<style type="text/css">
+  #slider div{
+    height: 100%;
+    width: 100%;
+  }
+  #slider ol{
+    position: absolute;
+    bottom: 15px;
+    top: auto;
+  }
+  #slider ol li{
+    margin-left: 1em;
+  }
+  #slider{
+    height: 400px; width: 90%; margin: 0 auto; position: abolute;
+  }
+  .item img{
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+    top: -25%;
+  }
+</style>
+
+<div id="slider" class="carousel slide">
+  <ol class="carousel-indicators">
+    <li data-target="#slider" data-slide-to="0" class="active"></li>
+    <li data-target="#slider" data-slide-to="1"></li>
+    <li data-target="#slider" data-slide-to="2"></li>
+  </ol>
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="active item">
+      <div>
+        <img src="http://i.imgur.com/rOzZets.jpg">
+      </div>
+    </div>
+    <div class="item">
+      <div>
+        <img src="http://i.imgur.com/2Q6OdQD.jpg">
+      </div>
+    </div>
+    <div class="item">
+      <div>
+        <img src="http://i.imgur.com/U2zcA2H.jpg">
+      </div>
+    </div>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#slider" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#slider" data-slide="next">&rsaquo;</a>
+</div>

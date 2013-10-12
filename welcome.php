@@ -4,6 +4,14 @@
     height: 100%;
     width: 100%;
   }
+  #slider ol{
+    position: absolute;
+    bottom: 15px;
+    top: auto;
+  }
+  #slider ol li{
+    margin-left: 1em;
+  }
   #slider{
     height: 400px; width: 90%; margin: 0 auto; position: abolute;
   }
@@ -23,9 +31,21 @@
   </ol>
   <!-- Carousel items -->
   <div class="carousel-inner">
-    <div class="active item"><img src="http://i.imgur.com/rOzZets.jpg"></div>
-    <div class="item"><img src="http://i.imgur.com/2Q6OdQD.jpg"></div>
-    <div class="item"><img src="http://i.imgur.com/U2zcA2H.jpg"></div>
+    <div class="active item">
+      <div>
+        <img src="http://i.imgur.com/rOzZets.jpg">
+      </div>
+    </div>
+    <div class="item">
+      <div>
+        <img src="http://i.imgur.com/2Q6OdQD.jpg">
+      </div>
+    </div>
+    <div class="item">
+      <div>
+        <img src="http://i.imgur.com/U2zcA2H.jpg">
+      </div>
+    </div>
   </div>
   <!-- Carousel nav -->
   <a class="carousel-control left" href="#slider" data-slide="prev">&lsaquo;</a>

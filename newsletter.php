@@ -1,6 +1,4 @@
-<div class="pull-right">
-	<a href="<?php echo $siteURL; ?>?page=new-post.php"> New Post </a>
-</div>	
+<br>
 <div style="clear: both; margin-bottom: 3px;"></div>
 <div id="news">
 	<?php
@@ -21,6 +19,4 @@
 		echo "<div style='clear: both'></div></div>  ";
 	?>
 </div>
-<div class="pull-right" style="position: absolute; bottom: 0.5em; right: 0.5em;">
-	<a href="<?php echo $siteURL; ?>?page=new-post.php"> New Post </a>
-</div>	
+<br>

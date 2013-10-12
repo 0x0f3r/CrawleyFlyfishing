@@ -3,16 +3,6 @@
 	ini_set("display_errors", 1);
 	
 	session_start();
-	
-	$siteURL = "index.php";
-	$database = array("host" => "localhost", "user" => "writer", "password" => "apples", "database" => "users");
-	$_SESSION["database"] = $database;
-	if(array_key_exists("page", $_GET) && $_GET["page"] == "new-post.php"){
-		if(!isset($_SESSION["logged"]) || !$_SESSION["logged"]){
-			header("Location: " . $siteURL . "?page=login.php");
-			die();
-		}
-	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -32,15 +22,6 @@
 <body>
 <div id="outer_content">
 	<div id="header" class="rounded-container">
-		<div class="pull-right">
-			<?php
-				if(isset($_SESSION["logged"]) && $_SESSION["logged"]){
-					echo "<p style='color: white;'> Welcome, " . $_SESSION["first-name"] . "<a href='?page=logout.php'> Not you? Log out. </a>";
-				}else{
-					echo "<p style='color: white;'> Not logged in: <a href='?page=login.php'>" . "Login </a>";
-				}
-			?>
-		</div>
 		<a href=?page=welcome.php><img src="flyfishers.png" alt="Crawley Fly Fishing"></a>
 		<div id="nav-bar"> 
 			| <a href="?page=welcome.php">Welcome</a> 

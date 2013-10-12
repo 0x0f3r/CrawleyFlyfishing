@@ -1,0 +1,24 @@
+h1, h2, h3, h4, h5, h6, p{
+	margin: 0;
+	padding: 0;
+}
+#header{
+	width: 100%;
+	height: 100px;
+	background-color: #0e500e;
+	color: #FFFF00;
+}
+#header div{
+	margin: 0 1em;
+}
+#header a{
+	color: #FFFF00;
+}
+#navbar{
+	min-width: 130px;
+	border: 1px solid black;
+	margin: 0 1em;
+}
+#content{
+	margin: 1em 0;
+}

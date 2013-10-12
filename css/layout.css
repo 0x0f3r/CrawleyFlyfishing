@@ -31,11 +31,8 @@ hr{
 #nav-bar{
 	float: right;
 }
-#header a:link{
+#header a{
 	color: #FFFF00;
-}
-#header a:visited{
-	color: #B8B800;
 }
 #inner_content{
 	background-color: #EEEEEE;

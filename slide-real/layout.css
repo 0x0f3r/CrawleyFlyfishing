@@ -1,0 +1,88 @@
+body, html{
+	font-size: medium;
+	font-size: 100%;
+	line-height: 1.125em;
+	height: 100%;
+	width: 100%;
+}
+*{
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+}
+.slideRealContainer{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	border: 1px solid black;
+}
+.slideReal{
+	position: absolute;
+	overflow: hidden;
+	margin: 0 auto 0 auto;
+	width: 100%;
+	height: 100%;
+}
+.slideUI{
+	background: black;
+	background: rgba(0,0,0,0.5);
+	
+	color: #EEEEEE;
+}
+.slideRealSlide{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	top: 0;
+}
+.slideRealSlide img{
+	position: absolute;
+}
+.slideRealSlide .slideCaption{
+	height: 30px;
+	width: 100%;
+	line-height: 30px;
+	
+	position: absolute;
+	bottom: 30px;
+	left: 0;
+	
+	padding: 0 1em;
+}
+.slideReal .arrow{
+	position: absolute;
+	top: 20%;
+	
+	height: 30px;
+	line-height: 30px;
+	width: 30px;
+	text-align: center;
+	
+	cursor: pointer;
+	
+	border-radius: 50%;
+}
+.slideReal .leftArrow{
+	left: 5px;
+}
+.slideReal .rightArrow{
+	right: 5px;
+}
+.SlideNavButtons{
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+}
+.SlideNavButtons li{
+	border-radius: 50%;
+	border: 1px solid white;
+	width: 10px;
+	height: 10px;
+	float: left;
+	margin: 0 2px;
+	cursor: pointer;
+	list-style-type: none;
+}

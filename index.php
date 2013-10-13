@@ -27,6 +27,7 @@
 		<div id="nav-bar"> 
 			| <a href="?page=welcome.php">Welcome</a> 
 			| <a href="?page=info.php">Info</a> 
+			| <a href="?page=gallery.php">Gallery</a> 
 			| <a href="?page=newsletter.php">Newsletter</a> 
 			| <a href="?page=calendar.php">Calendar</a>
 			| <a href="?page=contact.php">Contact</a> |

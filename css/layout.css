@@ -8,18 +8,21 @@ p{
 hr{
 	border: 0; border-top: 1px solid #ccc;
 }
-
+h1, h2, h3, h4, h5, h6, p{
+	margin: 0;
+	margin-left: 10px;
+}
 #outer_content{
 	width: 1100px;
 	max-width: 90%;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 1em;
 }
 #header{
 	background-color: #0e500e;
 	padding: 0.5em;
 	border-bottom: 5px solid #FFFF00;
+	margin: 0;
 }
 #header img{
 	width: 100%;
@@ -32,17 +35,16 @@ hr{
 	color: #FFFF00;
 }
 #inner_content{
-	background-color: #EEEEEE;
+	background-color: white;
 	position: relative;
+	border-bottom: 5px solid #FFFF00;
 }
-#inner_content > p{
-	margin-left: 2em;
-}
+
 #inner_content li{
 	margin-left: 4em;
 }
 #footer{
-	margin-top: 4em;
+	margin-top: 2em;
 	border-top: 1px solid black;
 	padding-top: 1em;
 	width: 100%;
@@ -66,12 +68,11 @@ hr{
 }
 .news-post{
 	border-top: 1px solid black;
-	padding: 0 1em 0 1em;
 	text-align: justify;
-	
+	margin: 0 2em;
 }
-.news-post > div{
-	margin-left: 2em;
+.news-post h3{
+	margin: 0;
 }
 .first-post{
 	border-bottom: 1px solid black;

@@ -1,6 +1,8 @@
 <h3>Adding our calendar to your calendar</h3>
 <p>Subscribing to the calendar will allow you to recieve updates more easily. You can add the calendar to you android or apple phone and recieve reminders through your phone or you can ask google to email you if you add it to your google calendar.
-	Our iCal feed is #placeholder# "https://www.google.com/calendar/ical/vulfhb6hmgcg675lgvegjo2a34%40group.calendar.google.com/public/basic.ics", see below for how to use this. 
+	Our iCal feed is #placeholder# "https://www.google.com/calendar/ical/vulfhb6hmgcg675lgvegjo2a34%40group.calendar.google.com/public/basic.ics", see below for how to use this. </p>
+<br>
+
 <div id="google">
 	<h4>Google Calendar</h4>
 	<ol>

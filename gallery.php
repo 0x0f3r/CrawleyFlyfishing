@@ -1,7 +1,6 @@
 <style type="text/css">
 	#images img{
-		max-width: 300px;
-		max-height: 300px;
+		height: 150px;
 		margin: 1em;
 	}
 	#image-viewer{

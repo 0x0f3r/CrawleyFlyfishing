@@ -37,7 +37,6 @@ hr{
 }
 #inner_content{
 	background-color: #EEEEEE;
-	min-height: 800px;
 	position: relative;
 }
 #inner_content > p{

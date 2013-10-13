@@ -74,5 +74,3 @@
 </div>
 <a href="?page=gallery.php"><div class="link-box pull-left" style="background-color: #A1BE86;"><img class="pull-right" src="camera.png"><h2>Gallery</h2></div></a>
 <a href="?page=newsletter.php"><div class="link-box pull-right" style="background-color: #086608;"><img class="pull-right" src="mail.png"><h2>Newsletter</h2></div></a>
-<h3>Welcome, have a look around</h3>
-<p>Crawley fly fishing club is a group of friendly fishermen and fisherwomen passinate about fly fishing. 

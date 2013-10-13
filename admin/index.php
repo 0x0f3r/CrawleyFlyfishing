@@ -13,19 +13,30 @@
 			<div>
 				<h1>Administration Control Panel</h1>
 			</div>
-			<a class="pull-right">Back to main site</a>
+			<br>
 		</div>
 		<div id="content">
 			<div class="pull-left" id="navbar">
 				<ul>
-					<li><a>new post</a></li>
-					<li><a>view posts</a></li>
-					<li><a>calendar</a></li>
-					<li><a>help</a></li>
+					<li><a href="?page=new-post.php">new post</a></li>
+					<li><a href="?page=view-posts.php">view posts</a></li>
+					<li><a href="?page=new-post.php">calendar</a></li>
+					<li><a href="?page=help.php">help</a></li>
+					<li><a href="../index.php">main site</a></li>
 				</ul>
 			</div>
-			<div id="page-content">
-				This is some page content.
+			<div class="pull-left" id="page-content">
+				<?php 
+					if(array_key_exists("page", $_GET) ){
+						if(file_exists ($_GET["page"])){
+							include($_GET["page"]); 
+						}else{
+							include("404.php");
+						}
+					}else{
+						include("help.php");
+					}
+				?>
 			</div>
 		</div>
 	</body>

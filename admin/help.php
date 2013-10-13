@@ -1,0 +1,2 @@
+<h3>Need some help?</h3>
+<p>This is the Admin control panel from the site. This is where you can manage the site. You will be able to make news posts, change what calendar is displayed, upload images to the gallery and possibly modify page content. 

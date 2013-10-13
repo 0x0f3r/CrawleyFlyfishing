@@ -23,7 +23,7 @@
 <div id="outer_content">
 	<div id="header" class="rounded-container">
 		<br>
-		<a href=?page=welcome.php><img src="flyfishers.png" alt="Crawley Fly Fishing"></a>
+		<a href=?page=welcome.php><img src="img/flyfishers.png" alt="Crawley Fly Fishing"></a>
 		<div id="nav-bar"> 
 			| <a href="?page=welcome.php">Welcome</a> 
 			| <a href="?page=info.php">Info</a> 
@@ -51,7 +51,7 @@
 		<div style="clear: both"></div>
 	</div>
 	<div id="footer">
-		<a href=?page=welcome.php><img src="flyfisherslogo.png" alt="logo"/></a>
+		<a href=?page=welcome.php><img src="img/flyfisherslogo.png" alt="logo"/></a>
 		<div class="pull-right" style="position: relative; top: 90%;"><a href="admin/index.php"><small>Admin</small></a></div>
 		<p>Boring footer stuff! This is where you might put legal stuff.<br>
 		   Made by Jonathan Poole. <br>

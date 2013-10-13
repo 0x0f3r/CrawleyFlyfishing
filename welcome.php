@@ -1,6 +1,6 @@
 
 <style type="text/css">
-  #slider div{
+  #slider>div{
     height: 100%;
     width: 100%;
   }
@@ -34,6 +34,19 @@
     left: 1em;
     color: black;
   }
+  div .caption{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 40%;
+    background-color: black;
+    color: white;
+    opacity: 0.5;
+  }
+  .caption *{
+    opacity: 1;
+  }
 </style>
 
 <div id="slider" class="carousel slide">
@@ -47,22 +60,38 @@
   <div class="carousel-inner">
     <div class="active item">
       <div>
-        <img src="image/slide1.JPG" style="top: -25%;">
+        <img src="image/slide1.JPG" style="top: -150px;">
+        <div class="caption">
+          <h3>Header</h3>
+          <p>Description
+        </div>
       </div>
     </div>
     <div class="item">
       <div>
-        <img src="image/slide2.JPG" style="top: -25%;">
+        <img src="image/slide2.JPG" style="top: -150px;">
+        <div class="caption">
+          <h3>Header</h3>
+          <p>Description
+        </div>
       </div>
     </div>
     <div class="item">
       <div>
-        <img src="image/slide3.JPG" style="top: -150%;">
+        <img src="image/slide3.JPG" style="top: -400px;">
+        <div class="caption">
+          <h3>Header</h3>
+          <p>Description
+        </div>
       </div>
     </div>
     <div class="item">
       <div>
         <img src="image/slide4.JPG" style="top: -25%;">
+        <div class="caption">
+          <h3>Header</h3>
+          <p>Description
+        </div>
       </div>
     </div>
   </div>

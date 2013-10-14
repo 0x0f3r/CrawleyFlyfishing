@@ -24,14 +24,14 @@
 	<div id="header" class="rounded-container">
 		<br>
 		<a href=?page=welcome.php><img src="img/flyfishers.png" alt="Crawley Fly Fishing"></a>
-		<div id="nav-bar"> 
-			| <a href="?page=welcome.php">Welcome</a> 
-			| <a href="?page=info.php">Info</a> 
-			| <a href="?page=gallery.php">Gallery</a> 
-			| <a href="?page=newsletter.php">Newsletter</a> 
-			| <a href="?page=calendar.php">Calendar</a>
-			| <a href="?page=contact.php">Contact</a> |
-		</div>
+		<ul id="nav-bar"> 
+			<li><a href="?page=welcome.php">Welcome</a></li>
+			<li><a href="?page=info.php">Info</a></li>
+			<li><a href="?page=gallery.php">Gallery</a></li>
+			<li><a href="?page=newsletter.php">Newsletter</a></li>
+			<li><a href="?page=calendar.php">Calendar</a></li>
+			<li><a href="?page=contact.php">Contact</a></li>
+		</ul>
 		<div style="clear:both;"></div>
 	</div>
 	<div id="inner_content" class="rounded-container">

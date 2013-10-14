@@ -23,6 +23,7 @@ h1, h2, h3, h4, h5, h6, p{
 	padding: 0.5em;
 	border-bottom: 5px solid #FFFF00;
 	margin: 0;
+	padding: 0;
 }
 #header img{
 	width: 100%;
@@ -30,6 +31,14 @@ h1, h2, h3, h4, h5, h6, p{
 }
 #nav-bar{
 	float: right;
+	margin: 0;
+	padding: 0;
+	padding-bottom: 2px;
+}
+#nav-bar li{
+	float: left;
+	list-style-type: none;
+	padding: 0 0.5em;
 }
 #header a{
 	color: #FFFF00;

@@ -31,7 +31,7 @@
 						if(file_exists ($_GET["page"])){
 							include($_GET["page"]); 
 						}else{
-							include("404.php");
+							include("../404.php");
 						}
 					}else{
 						include("help.php");

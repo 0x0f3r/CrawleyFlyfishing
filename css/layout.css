@@ -77,7 +77,6 @@ h1, h2, h3, h4, h5, h6, p{
 }
 .news-post{
 	border-top: 1px solid black;
-	text-align: justify;
 	margin: 0 2em;
 }
 .news-post h3{

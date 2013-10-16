@@ -15,7 +15,12 @@
                 return;
         }
         
-        fwrite($f, "<h3>" .  $_POST["title"] . "</h3> \n <div> " . $_POST["content"] . "</div><div class='pull-right'> $date </div>"); 
+        $title = $_POST["title"];
+        $content = $_POST["content"];
+
+        $content = nl2br($content);
+
+        fwrite($f, "<h3>" . $title  . "</h3> \n <div> " . $content . "</div><div class='pull-right'> $date </div>"); 
         if(!fclose($f)){
                 echo("\n Error code: 2 \n Unable to save file. Please report this to the server administrator");
                 return;

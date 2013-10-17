@@ -11,48 +11,97 @@
 	#post-title{
 		width: 100%;
 	}
+	#backdrop{
+		display: none;
+		position: fixed;
+
+		width: 100%;
+		height: 100%;
+
+		left: 0;
+		top: 0;
+
+		opacity: 0.8;
+		background-color: black;
+	}
+	#backdrop img {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+	}
+	#preview{
+		display: none;
+		position: fixed;
+
+		width: 80%;
+		height: 80%;
+
+		top: 10%;
+		left: 10%;
+	}
 	#preview *{
-		margin: 0;
+		margin: 0em;
+	}
+	#close{
+		position: absolute;
+		right: -10px;
+		top: -10px;
+		width: 20px;
+		height: 20px;
+
+		-webkit-border-radius: 999px;
+	    -moz-border-radius: 999px;
+	    border-radius: 999px;
+	    behavior: url(PIE.htc);
+
+	    background-color: #f5f5f5;
+	    border: 1px solid #e3e3e3;
+
+	    color: #BBB;
+	    text-align: center;
+
+	    cursor: pointer;
 	}
 </style>
 <script type="text/javascript">
-	//submit the post to server when clicking the button.
 	$(document).ready(function(){
-		$("#submit").click(function(){
+		//submit the post to server when clicking the button.
+		$("#preview-btn").click(function(){
 			var title = $("#post-title").val();
 			var content = $("#post-content").val();
 
-			alert("Title: " + title + "\nContent: " + content);
-
-			$.post("submit-post.php",{
+			$.post("parse-post.php",{
 	    		"title" : title,
 	   			"content" : content
 	    	},function(data){
-	    		if(data){
-	    			alert("There was a probem with that post. The server repsonded with: \n" + data );
-	    		}else{
-
-	    		}
+	    		$("#preview-content").html(data + "<div style='clear:both;'></div>");
+	    		$("#preview").css({display: "block"});
 	    	});
 		});
-	});
 
-	function updateContent(content){
-		$("#preview p").html(content.value);
-	}
-	function updateTitle(title){
-		$("#preview h3").html(title.value);
+		//close the preview window
+		$("#backdrop, #close").click(function(){
+			$("#backdrop").css({display: "none"});
+			$("#preview").css({display: "none"});
+		});
+	});
+	function preview(){
+		$("#backdrop").css({display: "block"});
 	}
 </script>
 <br>
 <div id="editor">
-	<input type="text" id="post-title" placeholder="Title" onkeyup="updateTitle(this)">
-	<textarea id="post-content" placeholder="Content" onkeyup="updateContent(this)"></textarea>
-	<hr>
-	<div id="preview">
-		<h3 id="title">Title...</h3>
-		<p id="content">Content...
-	</div>
-	<hr>
-	<input id="submit" type="button" value="submit" class="pull-right">
+	<input type="text" id="post-title" placeholder="Title"></input>
+	<textarea id="post-content" placeholder="Content"></textarea>
+	<div id="preview-btn" class="btn btn-primary pull-right" style="position: relative; right: -1em;" onclick="preview()">Preview</div>
+</div>
+
+<div id="backdrop">
+	<img src="/img/ajax-loader.gif">
+</div>
+
+<div id="preview" class="well">
+	<div id="close">X</div>
+	<div class="well" id="preview-content"></div>
+	<div class="btn btn-primary" id="submit" style="position: absolute; bottom: 1em; right: 1em;">Submit</div>
 </div>

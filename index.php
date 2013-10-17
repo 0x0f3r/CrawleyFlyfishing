@@ -52,11 +52,12 @@
 	</div>
 	<div id="footer">
 		<a href=?page=welcome.php><img src="img/flyfisherslogo.png" alt="logo"/></a>
-		<div class="pull-right" style="position: relative; top: 90%;"><a href="admin/index.php"><small>Admin</small></a></div>
+		<div style="position: absolute; bottom: -1em; right: 0;"><a href="admin/index.php"><small>Admin</small></a></div>
 		<p>Boring footer stuff! This is where you might put legal stuff.<br>
 		   Made by Jonathan Poole. <br>
 		   As a pet project to learn more about web development. <br>
 		   If you like what you see, contact me at: jfp6@kent.ac.uk		
+		<a href="http://www.clubmark.org.uk/what-clubmark"><img src="img/clubmark-resized.jpg" style=" width: 100px; height: auto; position: absolute; right: 0; bottom: 1em;"></a>
 	</div>
 </div>
 </body>

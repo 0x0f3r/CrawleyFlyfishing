@@ -24,9 +24,6 @@ html, body{
 #content{
 	margin: 1em 0;
 }
-#page-content p{
-	margin-left: 1em;
-}
 #page-content{
 	max-width: 85%;
 	width: 1500px;

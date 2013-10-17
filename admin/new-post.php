@@ -6,13 +6,17 @@
 	#post-content{
 		display: block;
 		width: 100%;
-		min-height: 600px;
+		min-height: 400px;
 	}
 	#post-title{
 		width: 100%;
 	}
+	#preview *{
+		margin: 0;
+	}
 </style>
 <script type="text/javascript">
+	//submit the post to server when clicking the button.
 	$(document).ready(function(){
 		$("#submit").click(function(){
 			var title = $("#post-title").val();
@@ -32,10 +36,23 @@
 	    	});
 		});
 	});
+
+	function updateContent(content){
+		$("#preview p").html(content.value);
+	}
+	function updateTitle(title){
+		$("#preview h3").html(title.value);
+	}
 </script>
 <br>
 <div id="editor">
-	<input type="text" id="post-title" placeholder="Title">
-	<textarea id="post-content" placeholder="Content"></textarea>
+	<input type="text" id="post-title" placeholder="Title" onkeyup="updateTitle(this)">
+	<textarea id="post-content" placeholder="Content" onkeyup="updateContent(this)"></textarea>
+	<hr>
+	<div id="preview">
+		<h3 id="title">Title...</h3>
+		<p id="content">Content...
+	</div>
+	<hr>
 	<input id="submit" type="button" value="submit" class="pull-right">
 </div>

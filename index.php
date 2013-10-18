@@ -56,7 +56,8 @@
 		<p>Boring footer stuff! This is where you might put legal stuff.<br>
 		   Made by Jonathan Poole. <br>
 		   As a pet project to learn more about web development. <br>
-		   If you like what you see, contact me at: jfp6@kent.ac.uk		
+		   If you like what you see, contact me at: jfp6@kent.ac.uk <br>
+		   <a href="?page=credits.php">Special thanks</a>
 		<a href="http://www.clubmark.org.uk/what-clubmark"><img src="img/clubmark-resized.jpg" style=" width: 100px; height: auto; position: absolute; right: 0; bottom: 1em;"></a>
 	</div>
 </div>

@@ -65,12 +65,15 @@
 </style>
 <script type="text/javascript">
 	$(document).ready(function(){
-		//submit the post to server when clicking the button.
+		//submit the post to server and preview
 		$("#preview-btn").click(function(){
+			$("#backdrop").css({display: "block"});
+
 			var title = $("#post-title").val();
 			var content = $("#post-content").val();
 
-			$.post("parse-post.php",{
+			$.post("submit-post.php",{
+				"action" : "preview",
 	    		"title" : title,
 	   			"content" : content
 	    	},function(data){
@@ -84,16 +87,28 @@
 			$("#backdrop").css({display: "none"});
 			$("#preview").css({display: "none"});
 		});
+
+		//submit the post to the server to save
+		$("#submit-btn").click(function(){
+			var title = $("#post-title").val();
+			var content = $("#post-content").val();
+
+			$.post("submit-post.php?action=submit",{
+				"action" : "submit",
+	    		"title" : title,
+	   			"content" : content
+	    	},function(data){
+	    		alert(data);
+	    	});
+		});
+
 	});
-	function preview(){
-		$("#backdrop").css({display: "block"});
-	}
 </script>
 <br>
 <div id="editor">
 	<input type="text" id="post-title" placeholder="Title"></input>
 	<textarea id="post-content" placeholder="Content"></textarea>
-	<div id="preview-btn" class="btn btn-primary pull-right" style="position: relative; right: -1em;" onclick="preview()">Preview</div>
+	<div id="preview-btn" class="btn btn-primary pull-right" style="position: relative; right: -1em;">Preview</div>
 </div>
 
 <div id="backdrop">
@@ -103,5 +118,5 @@
 <div id="preview" class="well">
 	<div id="close">X</div>
 	<div class="well" id="preview-content"></div>
-	<div class="btn btn-primary" id="submit" style="position: absolute; bottom: 1em; right: 1em;">Submit</div>
+	<div class="btn btn-primary" id="submit-btn" style="position: absolute; bottom: 1em; right: 1em;">Submit</div>
 </div>

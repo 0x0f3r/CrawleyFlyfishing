@@ -1,7 +1,57 @@
 <link rel="stylesheet" href="minified/themes/default.min.css" type="text/css" media="all" />
 <script type="text/javascript" src="minified/jquery.sceditor.bbcode.min.js"></script>
 
-<script>
+<style type="text/css">
+	#backdrop{
+        display: none;
+        position: fixed;
+
+        width: 100%;
+        height: 100%;
+
+        left: 0;
+        top: 0;
+
+        opacity: 0.8;
+        background-color: black;
+    }
+    #preview{
+    	display: none;
+
+    	width: 80%;
+    	height: 80%;
+
+        padding: 1em;
+
+    	position: fixed;
+    	left: 10%;
+    	top: 10%;
+
+    	background-color: white;
+    }
+    #close{
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        width: 20px;
+        height: 20px;
+
+        -webkit-border-radius: 999px;
+        -moz-border-radius: 999px;
+        border-radius: 999px;
+        behavior: url(PIE.htc);
+
+        background-color: white;
+        border: 1px solid black;
+
+        text-align: center;
+
+        cursor: pointer;
+    }
+
+</style>
+
+<script type="text/javascript">
 $(function() {
 	$("textarea").sceditor({
 		style: "minified/jquery.sceditor.default.min.css",
@@ -14,8 +64,37 @@ $(function() {
 	$("#preview-btn").click(function(){
 		var content = $("textarea").sceditor('instance').val();
 		var title = $("#title").val();
-		alert(title + "\n" + content);
+		$("#backdrop").css({display: "block"});
+		$(".sceditor-container").css({display: "none"});
+		$.post("submit-post.php",{
+            "action" : "preview",
+            "title" : title,
+            "content" : content
+      	},function(data){
+      		$("#preview").css({display: "block"});
+            $("#preview .well").html(data);
+        });
 	});
+    $("#submit-btn").click(function(){
+        var content = $("textarea").sceditor('instance').val();
+        var title = $("#title").val();
+        $.post("submit-post.php",{
+            "action" : "submit",
+            "title" : title,
+            "content" : content
+        },function(data){
+            if(data){
+                alert(data);
+            }else{
+                alert("post sucessful");
+            }
+        });
+    });
+    $("#close").click(function(){
+        $("#backdrop").css({display: "none"});
+        $(".sceditor-container").css({display: "block"});
+        $("#preview").css({display: "none"});
+    });
 
 });
 </script>
@@ -24,4 +103,10 @@ $(function() {
 	<textarea style="width: 100%; height: 400px;"></textarea>
 	<br>
 	<div id="preview-btn" class="btn btn-primary" style="position: absolute; bottom: 0em; right: -1em;">Preview</div>
+</div>
+<div id="backdrop"></div>
+<div id="preview">
+    <div class="well"></div>
+    <div id="close">X</div>
+    <div class="btn btn-primary pull-right" id="submit-btn">Submit</div>
 </div>

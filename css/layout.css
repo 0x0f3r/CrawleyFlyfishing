@@ -50,10 +50,6 @@ h1, h2, h3, h4, h5, h6, p{
 	position: relative;
 	border-bottom: 5px solid #FFFF00;
 }
-
-#inner_content li{
-	margin-left: 4em;
-}
 #footer{
 	margin-top: 2em;
 	border-top: 1px solid black;

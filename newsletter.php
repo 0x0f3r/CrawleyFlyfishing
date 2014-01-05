@@ -3,7 +3,7 @@
 		$dir = "./newsletters/";
 		$files = scandir($dir, 1);
 		$fileCount = count($files) - 2;
-		$pageLength = 2;
+		$pageLength = 5;
 		$pageCount = ceil($fileCount/$pageLength);
 
 		$page = 0;

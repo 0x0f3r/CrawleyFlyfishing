@@ -1,2 +1,0 @@
-<h3>Made a few changes to the new post editor.</h3> 
- <div> This post is mainly meant to test everything is working as expected. I have made it so that when you first focus on the title or the content, the place-holder text automatically disappears. I also want to check the the posts order correctly once posted.&nbsp;</div><div class='pull-right'> Fri 6th Sep 2013 13:57 </div>

@@ -29,6 +29,15 @@
 
     	background-color: white;
     }
+    #preview .well{
+        overflow-x: scroll;
+        height: 88%; 
+    }
+    #submit-btn{
+        position: absolute;
+        bottom: 2px;
+        right: 1em;
+    }
     #close{
         position: absolute;
         right: -10px;
@@ -106,7 +115,7 @@ $(function() {
 </div>
 <div id="backdrop"></div>
 <div id="preview">
-    <div class="well"></div>
     <div id="close">X</div>
+    <div class="well"></div>
     <div class="btn btn-primary pull-right" id="submit-btn">Submit</div>
 </div>

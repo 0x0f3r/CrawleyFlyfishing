@@ -4,19 +4,30 @@
 	}
 	.post-browser-item{
 		position: relative;
+		border-radius: 2px;
+		border: 1px solid #BBBBBB;
+		background-color: #E0E0E0;
+		margin: 1em 0;
+		padding: 0 1em;
 	}
-	.post-browser-item img{
-		position: absolute;
-		right: 1em;
-		top: 10%;
-		height: 80%;
+	.post-browser-item .news-post .content{
+		display: none;
+	}
+	.post-browser-item .title{
+		display: block;
+		cursor: pointer;
 	}
 </style>
 <script type="text/javascript">
 	$(document).ready(function(){
+		//adds the titles of the news posts to the display.
 		$("#news .news-post").each(function(){
-			var title = $(this).children(":first")[0];
-			$("#post-browser").append("<div class='well post-browser-item' id='post-" + $(this).attr("id") + "'>" + title.outerHTML + "<img src='/img/down-chevron.png' alt='expand'>" + "</div>");
+			$("#post-browser").append("<div class='post-browser-item' id='post-" + $(this).attr("id") + "'>" + this.outerHTML +  "</div>");
+		});
+
+		//expands the psot 
+		$(".post-browser-item").click(function(){
+			$(this).find(".news-post .content").slideToggle();;
 		});
 	});
 </script>

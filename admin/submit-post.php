@@ -11,7 +11,7 @@
                 //formatting the date
                 $date = date("D jS M Y G") . ":" . date("i");
 
-                return ("<h3 class='title'>" . $title . "</h3>" . "<div id='content'>" . $content . "</div>" . "<div class='pull-right' id='date'>" . $date . "</div>");
+                return ("<h3 class='title'>" . $title . "</h3>" . "<div class='content'>" . $content . "</div>" . "<div class='pull-right' class='date'>" . $date . "</div>");
         }
         function submit(){
                 //opens a file with the current time elapsed since the unix epoch

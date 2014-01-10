@@ -1,6 +1,12 @@
 <?php
-	if(!isset($_GET["post-id"]) || !file_exists("../newsletters/" . $_GET["post-id"])){
-        header('Location: ?page=../400.php');
+	if(!isset($_POST["post-id"]) || !file_exists("../newsletters/" . $_GET["post-id"])){
+        echo '400';
     }
-    unlink('../newsletters/$_GET["post-id"]');
+    $path = realpath('../newsletters/' . $_POST["post-id"]);
+    if(is_readable($path)){
+    	unlink($path);
+    	echo $path;
+    }else{
+    	echo "hi: " . $path;
+    }
 ?>

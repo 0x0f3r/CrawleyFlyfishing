@@ -28,15 +28,29 @@
 		$("#news .news-post").each(function(){
 			//apend the controls for edit/delete.
 			$(this).append(
-				'<div class="news-post-controls">'+
-					'<a href="?page=delete-post.php&post-id=' + $(this).attr("id") + '">delete</a>'+
-					'<a href="?page=edit-post.php&post-id=' + $(this).attr("id") + '">edit</a>'+
+				'<div class="news-post-controls">' +
+					'<a class="delete" href="#" id="delete-' + $(this).attr("id") + '">delete</a>' +
+					'<a href="?page=edit-post.php&post-id=' + $(this).attr("id") + '">edit</a>' +
 				'</div>'
 			);
 		});
-		//expands the psot 
-		$(".news-post").click(function(){
-			$(this).find(".content").slideToggle();;
+		//expands the post 
+		$(".news-post .title").click(function(){
+			$(this).parent().find(".content").slideToggle();
+		});
+
+		$(".delete").click(function(){
+			var post = $(this).attr("id").replace("delete-","");
+
+			$.post("delete-post.php",{
+	            "post-id" : post
+	        },function(data){
+	            if(data){
+	                alert(data);
+	            }else{
+	                location.reload();
+	            }
+	        });
 		});
 	});
 </script>

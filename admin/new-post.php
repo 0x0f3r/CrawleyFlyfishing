@@ -95,7 +95,7 @@ $(function() {
             if(data){
                 alert(data);
             }else{
-                alert("post sucessful");
+                window.location.href = "?page=view-posts.php";
             }
         });
     });

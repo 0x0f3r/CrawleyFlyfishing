@@ -1,8 +1,5 @@
 <style type="text/css">
-	#news{
-		display: none;
-	}
-	.post-browser-item{
+	.news-post{
 		position: relative;
 		border-radius: 2px;
 		border: 1px solid #BBBBBB;
@@ -10,40 +7,36 @@
 		margin: 1em 0;
 		padding: 0 1em;
 	}
-	.post-browser-item .news-post .content{
+	.news-post .content{
 		display: none;
 	}
-	.post-browser-item .title{
+	.news-post .title{
 		display: block;
 		cursor: pointer;
 	}
-	.post-browser-item-controls{
+	.news-post-controls{
 		position: absolute;
 		right: 1em;
 		top: 0;
 	}
-	.post-browser-item-controls *{
+	.news-post-controls *{
 		margin: 0 2px;
 	}
 </style>
 <script type="text/javascript">
 	$(document).ready(function(){
-		//adds the titles of the news posts to the display.
 		$("#news .news-post").each(function(){
-			$("#post-browser").append("<div class='post-browser-item' id='" + $(this).attr("id") + "'>" + this.outerHTML +  "</div>");
-		});
-		$("#post-browser .post-browser-item").each(function(){
 			//apend the controls for edit/delete.
 			$(this).append(
-				'<div class="post-browser-item-controls">'+
+				'<div class="news-post-controls">'+
 					'<a href="?page=delete-post.php&post-id=' + $(this).attr("id") + '">delete</a>'+
 					'<a href="?page=edit-post.php&post-id=' + $(this).attr("id") + '">edit</a>'+
 				'</div>'
 			);
 		});
 		//expands the psot 
-		$(".post-browser-item").click(function(){
-			$(this).find(".news-post .content").slideToggle();;
+		$(".news-post").click(function(){
+			$(this).find(".content").slideToggle();;
 		});
 	});
 </script>
@@ -108,7 +101,7 @@
 			$startPage = 0;
 		}
 
-		echo '<div class="pagination pull-right" style="margin: 6px 2em 0 0"><ul>';
+		echo '<div class="pagination pull-right" style="margin: 0;"><ul>';
 		echo '<li><a href="?page=view-posts.php&p=0">«</a></li>';
 		for($i = $startPage; $i < $endPage; $i++){
 			if($i == $page){

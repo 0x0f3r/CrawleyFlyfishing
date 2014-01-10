@@ -88,7 +88,7 @@
 			include($dir . $files[$i]); 
 			echo " <div style='clear: both'></div></div> ";
 		}else{
-			echo "<div class='first-post news-post'>";
+			echo "<div class='first-post news-post' id=" . $files[$i] . ">";
 			include($dir . $files[$i]); 
 			echo "<div style='clear: both'></div></div>  ";
 			break;

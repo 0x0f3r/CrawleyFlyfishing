@@ -5,8 +5,7 @@
     $path = realpath('../newsletters/' . $_POST["post-id"]);
     if(is_readable($path)){
     	unlink($path);
-    	echo $path;
     }else{
-    	echo "hi: " . $path;
+    	echo "Internal error. Failed to read " . $path;
     }
 ?>

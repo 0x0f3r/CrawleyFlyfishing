@@ -41,16 +41,17 @@
 
 		$(".delete").click(function(){
 			var post = $(this).attr("id").replace("delete-","");
-
-			$.post("delete-post.php",{
-	            "post-id" : post
-	        },function(data){
-	            if(data){
-	                alert(data);
-	            }else{
-	                location.reload();
-	            }
-	        });
+			if(confirm("Are you sure you want to delete this post?")){
+				$.post("delete-post.php",{
+		            "post-id" : post
+		        },function(data){
+		            if(data){
+		                alert(data);
+		            }else{
+		                location.reload();
+		            }
+		        });
+		    }
 		});
 	});
 </script>

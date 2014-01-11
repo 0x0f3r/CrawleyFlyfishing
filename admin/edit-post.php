@@ -68,7 +68,8 @@
 
 <script type="text/javascript">
 $(function() {
-    var post-id = <?php $_GET["post-id"]; ?>;
+    var postId = "<?php echo $_GET["post-id"]; ?>";
+
 	$("textarea").sceditor({
 		style: "minified/jquery.sceditor.default.min.css",
 		width: "100.8%",
@@ -76,6 +77,9 @@ $(function() {
 		id: "content",
 		resizeEnabled: false
 	});
+
+    $("#title").val($("#post-data .title").html());
+    $("textarea").sceditor('instance').val($("#post-data .content")[0].outerHTML);
 
 	$("#preview-btn").click(function(){
 		var content = $("textarea").sceditor('instance').val();
@@ -98,12 +102,12 @@ $(function() {
             "action" : "submit",
             "title" : title,
             "content" : content,
-            "post" : $post-id;
+            "post" : postId
         },function(data){
             if(data){
                 alert(data);
             }else{
-                alert("post sucessful");
+                window.location.href = "?page=view-posts.php";
             }
         });
     });
@@ -112,7 +116,6 @@ $(function() {
         $(".sceditor-container").css({display: "block"});
         $("#preview").css({display: "none"});
     });
-
 });
 </script>
 <div style="width: 80%; position: relative; margin: 0 auto;">
@@ -126,4 +129,9 @@ $(function() {
     <div id="close">X</div>
     <div class="well"></div>
     <div class="btn btn-primary pull-right" id="submit-btn">Submit</div>
+</div>
+<div id="post-data" style="display: none">
+    <?php
+        include("../newsletters/" . $_GET["post-id"]);
+    ?>
 </div>

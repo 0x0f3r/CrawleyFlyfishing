@@ -16,18 +16,10 @@
         function submit(){
                 //opens a file with the current time elapsed since the unix epoch
                 $filepath = "../newsletters/" . date("U") .".php";
-                $f = fopen($filepath, "w"); 
-                //checks to see if the file was opened successfully.
-                if($f == false){
-                        echo(" \n Error code: 1 \n Unable to open file. Please report this to the server administrator. \n");
-                        return;
+                if(isset($_POST["post"])){
+                        $filepath = "../newsletters/" . $_POST["post"];
                 }
-
-                fwrite($f, parse()); 
-                if(!fclose($f)){
-                        echo("\n Error code: 2 \n Unable to save file. Please report this to the server administrator");
-                        return;
-                }
+                file_put_contents($filepath, parse());
         }
 
         if (isset($_POST["action"])) {

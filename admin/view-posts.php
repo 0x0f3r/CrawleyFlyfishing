@@ -12,7 +12,13 @@
 	}
 	.news-post .title{
 		display: block;
+		color: #0088cc;
+  		text-decoration: none;
+	}
+	.news-post .title:hover, .news-post .title:focus{
 		cursor: pointer;
+		color: #005580;
+  		text-decoration: underline;
 	}
 	.news-post-controls{
 		position: absolute;

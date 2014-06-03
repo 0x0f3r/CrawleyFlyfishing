@@ -3,7 +3,7 @@
 		$dir = "./newsletters/";
 		$files = scandir($dir, 1);
 		$fileCount = count($files) - 2;
-		$pageLength = 5;
+		$pageLength = 5; // change to liking
 		$pageCount = ceil($fileCount/$pageLength);
 
 		$page = 0;
@@ -35,7 +35,9 @@
 
 		echoPageNumbers($pageCount, $page);
 
+		//prints out a bootstrap page selector thingy
 		function echoPageNumbers($pageCount, $page){
+			//warning, black magick ahead. Probably works well. 
 			$startPage=0;
 			$endPage = 5;
 
@@ -50,7 +52,9 @@
 			if($startPage < 0){
 				$startPage = 0;
 			}
+			//end black magic
 
+			//actual printing of the page selector thingy
 			echo '<div class="pagination pull-right" style="margin: 6px 2em 0 0"><ul>';
 			echo '<li><a href="?page=newsletter.php&p=0">«</a></li>';
 			for($i = $startPage; $i < $endPage; $i++){
